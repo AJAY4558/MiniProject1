@@ -37,7 +37,7 @@ app.post("/complaints", (req, res) => {
         date: new Date().toLocaleString()
     }
 
-    complaints.push(newComplaint)
+    complaints.unshift(newComplaint)
 
     res.status(201).json(newComplaint)
 })
